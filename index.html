@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Simple Calculator</h1>
+      <div class="error">
+        Error: checkbox harus dipilih lebih dari satu!
+      </div>
+      <div class="app__inner">
+        <input type="number" name="" id="input1" disabled />
+        <input class="checky" type="checkbox" id="check1" name="input1" />
+        <label for="check1"></label>
+      </div>
+      <div class="app__inner">
+        <input type="number" name="" id="input2" disabled />
+        <input class="checky" type="checkbox" id="check2" name="input2" />
+        <label for="check2"></label>
+      </div>
+      <div class="app__inner">
+        <input type="number" name="" id="input3" disabled />
+        <input class="checky" type="checkbox" id="check3" name="input3" />
+        <label for="check3"></label>
+      </div>
+      <div class="app__button">
+        <button onclick="hitung('+')">+</button>
+        <button onclick="hitung('-')">-</button>
+        <button onclick="hitung('x')">x</button>
+        <button onclick="hitung('/')">/</button>
+      </div>
+      <div class="app__result">
+        <span>Hasil</span>
+        <span class="result">?</span>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

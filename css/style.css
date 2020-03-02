@@ -1,0 +1,165 @@
+:root {
+  --bg-color: #eee;
+  --bg-box: #fff;
+  --primary-color: #222;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  min-width: 25rem;
+  background-color: var(--bg-box);
+  padding: 2.85rem 2.5rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.09);
+}
+
+#app h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.65em;
+}
+
+#app .error {
+  display: none;
+  font-size: 0.85em;
+  margin-bottom: 1.5rem;
+  background-color: rgb(245, 137, 137);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0.85rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.app__inner {
+  display: flex;
+  align-items: center;
+}
+
+.app__inner:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.app__inner input[type="number"] {
+  font-family: "Open Sans", sans-serif;
+  flex: 1;
+  padding: 0.5rem 0.85rem;
+  margin-right: 1.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.app__inner input[type="checkbox"] {
+  display: none;
+}
+
+.app__inner input[type="checkbox"] + label {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  padding: 0.95rem;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.app__inner input[type="checkbox"]:checked + label {
+  background-color: var(--primary-color);
+}
+
+.app__inner input[type="checkbox"]:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.app__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__button button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: #fff;
+  box-shadow: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.app__button button:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.app__result {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.15);
+  padding-top: 1rem;
+}
+
+.app__result .result {
+  font-weight: bold;
+}
+
+@media (max-width: 60rem) {
+  body {
+    align-items: flex-start;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  #app {
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+  }
+}
