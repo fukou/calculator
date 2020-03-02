@@ -44,6 +44,10 @@ let hitung = pilihan => {
     case "+":
       if (inputThree.disabled) {
         hasil = inputTextOne + inputTextTwo;
+      } else if (inputTwo.disabled) {
+        hasil = inputTextOne + inputTextThree;
+      } else if (inputOne.disabled) {
+        hasil = inputTextTwo + inputTextThree;
       } else {
         hasil = inputTextOne + inputTextTwo + inputTextThree;
       }
@@ -51,6 +55,10 @@ let hitung = pilihan => {
     case "-":
       if (inputThree.disabled) {
         hasil = inputTextOne - inputTextTwo;
+      } else if (inputTwo.disabled) {
+        hasil = inputTextOne - inputTextThree;
+      } else if (inputOne.disabled) {
+        hasil = inputTextTwo - inputTextThree;
       } else {
         hasil = inputTextOne - inputTextTwo - inputTextThree;
       }
@@ -58,6 +66,10 @@ let hitung = pilihan => {
     case "x":
       if (inputThree.disabled) {
         hasil = inputTextOne * inputTextTwo;
+      } else if (inputTwo.disabled) {
+        hasil = inputTextOne * inputTextThree;
+      } else if (inputOne.disabled) {
+        hasil = inputTextTwo * inputTextThree;
       } else {
         hasil = inputTextOne * inputTextTwo * inputTextThree;
       }
@@ -65,6 +77,10 @@ let hitung = pilihan => {
     case "/":
       if (inputThree.disabled) {
         hasil = inputTextOne / inputTextTwo;
+      } else if (inputTwo.disabled) {
+        hasil = inputTextOne / inputTextThree;
+      } else if (inputOne.disabled) {
+        hasil = inputTextTwo / inputTextThree;
       } else {
         hasil = inputTextOne / inputTextTwo / inputTextThree;
       }
