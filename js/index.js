@@ -1,19 +1,18 @@
+// deklarasi variabel
 const inputOne = document.querySelector("#input1");
 const inputTwo = document.querySelector("#input2");
 const inputThree = document.querySelector("#input3");
-
 const checkOne = document.querySelector("#check1");
 const checkTwo = document.querySelector("#check2");
 const checkThree = document.querySelector("#check3");
 
+// jika checkbox dipilih, maka input yang disabled akan di-enable kembali
 checkOne.onchange = function() {
   inputOne.disabled = !this.checked;
 };
-
 checkTwo.onchange = function() {
   inputTwo.disabled = !this.checked;
 };
-
 checkThree.onchange = function() {
   inputThree.disabled = !this.checked;
 };
@@ -33,6 +32,7 @@ for (let i = 0; i < checky.length; i++) {
   };
 }
 
+// fungsi perhitungan
 let hitung = pilihan => {
   let inputTextOne = parseInt(inputOne.value);
   let inputTextTwo = parseInt(inputTwo.value);
