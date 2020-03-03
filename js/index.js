@@ -6,8 +6,7 @@ const checkOne = document.querySelector("#check1");
 const checkTwo = document.querySelector("#check2");
 const checkThree = document.querySelector("#check3");
 
-let errorHasil = "Tidak ada hasil, masukkan minimal 2 masukkan";
-
+document.querySelector(".app__button").classList.add("disabled__button");
 // jika checkbox dipilih, maka input yang disabled akan di-enable kembali
 checkOne.onchange = function() {
   inputOne.disabled = !this.checked;
@@ -31,6 +30,14 @@ for (let i = 0; i < checky.length; i++) {
     } else {
       error.style.display = "none";
     }
+
+    if (checked.length > 1) {
+      document
+        .querySelector(".app__button")
+        .classList.remove("disabled__button");
+    } else {
+      document.querySelector(".app__button").classList.add("disabled__button");
+    }
   };
 }
 
@@ -50,12 +57,8 @@ let hitung = pilihan => {
         hasil = inputTextOne + inputTextThree;
       } else if (inputOne.disabled) {
         hasil = inputTextTwo + inputTextThree;
-      } else if (inputOne.disabled && inputTwo.disabled) {
-        hasil = errorHasil;
-      } else if (inputTwo.disabled && inputThree.disabled) {
-        hasil = errorHasil;
-      } else if (inputOne.disabled && inputThree.disabled) {
-        hasil = errorHasil;
+      } else if (inputThree.disabled && inputTwo.disabled) {
+        console.log("Tidak berhasil");
       } else {
         hasil = inputTextOne + inputTextTwo + inputTextThree;
       }
@@ -67,12 +70,6 @@ let hitung = pilihan => {
         hasil = inputTextOne - inputTextThree;
       } else if (inputOne.disabled) {
         hasil = inputTextTwo - inputTextThree;
-      } else if (inputOne.disabled && inputTwo.disabled) {
-        hasil = errorHasil;
-      } else if (inputTwo.disabled && inputThree.disabled) {
-        hasil = errorHasil;
-      } else if (inputOne.disabled && inputThree.disabled) {
-        hasil = errorHasil;
       } else {
         hasil = inputTextOne - inputTextTwo - inputTextThree;
       }
@@ -84,12 +81,6 @@ let hitung = pilihan => {
         hasil = inputTextOne * inputTextThree;
       } else if (inputOne.disabled) {
         hasil = inputTextTwo * inputTextThree;
-      } else if (inputOne.disabled && inputTwo.disabled) {
-        hasil = errorHasil;
-      } else if (inputTwo.disabled && inputThree.disabled) {
-        hasil = errorHasil;
-      } else if (inputOne.disabled && inputThree.disabled) {
-        hasil = errorHasil;
       } else {
         hasil = inputTextOne * inputTextTwo * inputTextThree;
       }
@@ -101,12 +92,6 @@ let hitung = pilihan => {
         hasil = inputTextOne / inputTextThree;
       } else if (inputOne.disabled) {
         hasil = inputTextTwo / inputTextThree;
-      } else if (inputOne.disabled && inputTwo.disabled) {
-        hasil = errorHasil;
-      } else if (inputTwo.disabled && inputThree.disabled) {
-        hasil = errorHasil;
-      } else if (inputOne.disabled && inputThree.disabled) {
-        hasil = errorHasil;
       } else {
         hasil = inputTextOne / inputTextTwo / inputTextThree;
       }
